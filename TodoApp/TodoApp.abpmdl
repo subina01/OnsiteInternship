@@ -1,0 +1,113 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "5.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.Account": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.Identity": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/25/2025 09:54:05 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "TodoApp.Application": {
+      "path": "src/TodoApp.Application/TodoApp.Application.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.Application.Tests": {
+      "path": "test/TodoApp.Application.Tests/TodoApp.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.Domain.Shared": {
+      "path": "src/TodoApp.Domain.Shared/TodoApp.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.Application.Contracts": {
+      "path": "src/TodoApp.Application.Contracts/TodoApp.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.HttpApi": {
+      "path": "src/TodoApp.HttpApi/TodoApp.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.HttpApi.Client": {
+      "path": "src/TodoApp.HttpApi.Client/TodoApp.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.Web": {
+      "path": "src/TodoApp.Web/TodoApp.Web.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.Web.Tests": {
+      "path": "test/TodoApp.Web.Tests/TodoApp.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.EntityFrameworkCore.Tests": {
+      "path": "test/TodoApp.EntityFrameworkCore.Tests/TodoApp.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.EntityFrameworkCore": {
+      "path": "src/TodoApp.EntityFrameworkCore/TodoApp.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.TestBase": {
+      "path": "test/TodoApp.TestBase/TodoApp.TestBase.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.Domain.Tests": {
+      "path": "test/TodoApp.Domain.Tests/TodoApp.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/TodoApp.HttpApi.Client.ConsoleTestApp/TodoApp.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "TodoApp.DbMigrator": {
+      "path": "src/TodoApp.DbMigrator/TodoApp.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "TodoApp.Domain": {
+      "path": "src/TodoApp.Domain/TodoApp.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

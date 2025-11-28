@@ -1,0 +1,15 @@
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\bin\Debug\net10.0\LibraryManagement.Application.Contracts.deps.json
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\bin\Debug\net10.0\LibraryManagement.Application.Contracts.dll
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\bin\Debug\net10.0\LibraryManagement.Application.Contracts.pdb
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\bin\Debug\net10.0\LibraryManagement.Domain.Shared.dll
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\bin\Debug\net10.0\LibraryManagement.Domain.Shared.pdb
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.AssemblyInfo.cs
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryM.49B76DE6.Up2Date
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.dll
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\refint\LibraryManagement.Application.Contracts.dll
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\LibraryManagement.Application.Contracts.pdb
+D:\LibraryManagement\src\LibraryManagement.Application.Contracts\obj\Debug\net10.0\ref\LibraryManagement.Application.Contracts.dll

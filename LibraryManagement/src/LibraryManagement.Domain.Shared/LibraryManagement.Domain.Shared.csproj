@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Identity.Domain.Shared" Version="10.0.0" />
+		<PackageReference Include="Volo.Abp.Localization" Version="10.0.0" />
+		<PackageReference Include="Volo.Abp.Validation" Version="10.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<!-- Embed all JSON files as resources -->
+		<EmbeddedResource Include="Localization\LibraryManagement\*.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Ensure folder is created even if empty initially -->
+		<Folder Include="Localization\LibraryManagement\" />
+	</ItemGroup>
+
+	<!-- This ensures proper namespace for embedded resources -->
+	<PropertyGroup>
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	</PropertyGroup>
+
+</Project>

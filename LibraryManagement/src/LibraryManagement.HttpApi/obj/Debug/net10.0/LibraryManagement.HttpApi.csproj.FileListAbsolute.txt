@@ -1,0 +1,17 @@
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.HttpApi.deps.json
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.HttpApi.dll
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.HttpApi.pdb
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.Application.Contracts.dll
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.Domain.Shared.dll
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.Application.Contracts.pdb
+D:\LibraryManagement\src\LibraryManagement.HttpApi\bin\Debug\net10.0\LibraryManagement.Domain.Shared.pdb
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.csproj.AssemblyReference.cache
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.AssemblyInfoInputs.cache
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.AssemblyInfo.cs
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.csproj.CoreCompileInputs.cache
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryM.B9D302CF.Up2Date
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.dll
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\refint\LibraryManagement.HttpApi.dll
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\LibraryManagement.HttpApi.pdb
+D:\LibraryManagement\src\LibraryManagement.HttpApi\obj\Debug\net10.0\ref\LibraryManagement.HttpApi.dll

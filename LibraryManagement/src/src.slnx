@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="LibraryManagement.Application.Contracts/LibraryManagement.Application.Contracts.csproj" Id="5f9011c2-99fd-49b6-9db9-53e781e0fa54" />
+  <Project Path="LibraryManagement.Application/LibraryManagement.Application.csproj" Id="6154f610-bc89-4c2d-9384-60fd434b2eb4" />
+  <Project Path="LibraryManagement.Domain.Shared/LibraryManagement.Domain.Shared.csproj" Id="6abe0bce-5e51-40fa-a17a-b49bdb7dd4ad" />
+  <Project Path="LibraryManagement.Domain/LibraryManagement.Domain.csproj" Id="295207d2-ee23-4693-b706-90c0220edf83" />
+  <Project Path="LibraryManagement.EntityFrameworkCore/LibraryManagement.EntityFrameworkCore.csproj" Id="1692c2a7-9c36-43b9-819c-f678967edcf7" />
+  <Project Path="LibraryManagement.HttpApi.Host/LibraryManagement.HttpApi.Host.csproj" />
+  <Project Path="LibraryManagement.HttpApi/LibraryManagement.HttpApi.csproj" Id="97ea27b6-a4f7-423c-8691-99bf72d572f8" />
+</Solution>
