@@ -13,6 +13,7 @@
           "Volo.Abp.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Volo.Abp.AspNetCore.Mvc": "10.0.0",
           "Volo.Abp.FeatureManagement.HttpApi": "10.0.0",
+          "Volo.Abp.Identity.EntityFrameworkCore": "10.0.0",
           "Volo.Abp.Identity.HttpApi": "10.0.0",
           "Volo.Abp.PermissionManagement.HttpApi": "10.0.0",
           "Volo.Abp.SettingManagement.HttpApi": "10.0.0",
@@ -112,6 +113,36 @@
       "Microsoft.Bcl.AsyncInterfaces/10.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/10.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/10.0.0": {
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.25.52411"
           }
@@ -232,6 +263,14 @@
           "lib/net5.0/NUglify.dll": {
             "assemblyVersion": "1.21.17.0",
             "fileVersion": "1.21.17.0"
+          }
+        }
+      },
+      "Riok.Mapperly/4.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
           }
         }
       },
@@ -592,6 +631,20 @@
           }
         }
       },
+      "Volo.Abp.EntityFrameworkCore/10.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0",
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Json": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
       "Volo.Abp.EventBus/10.0.0": {
         "dependencies": {
           "Volo.Abp.BackgroundWorkers": "10.0.0",
@@ -745,6 +798,20 @@
           }
         }
       },
+      "Volo.Abp.Identity.Domain/10.0.0": {
+        "dependencies": {
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Identity.Domain.Shared": "10.0.0",
+          "Volo.Abp.Mapperly": "10.0.0",
+          "Volo.Abp.Users.Domain": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Identity.Domain.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
       "Volo.Abp.Identity.Domain.Shared/10.0.0": {
         "dependencies": {
           "Volo.Abp.Auditing.Contracts": "10.0.0",
@@ -754,6 +821,18 @@
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Identity.Domain.Shared.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "Volo.Abp.Identity.EntityFrameworkCore/10.0.0": {
+        "dependencies": {
+          "Volo.Abp.Identity.Domain": "10.0.0",
+          "Volo.Abp.Users.EntityFrameworkCore": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.0.0"
           }
@@ -826,6 +905,20 @@
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Localization.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "Volo.Abp.Mapperly/10.0.0": {
+        "dependencies": {
+          "Riok.Mapperly": "4.3.0",
+          "Volo.Abp.Auditing": "10.0.0",
+          "Volo.Abp.ObjectExtending": "10.0.0",
+          "Volo.Abp.ObjectMapping": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Mapperly.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.0.0"
           }
@@ -1122,12 +1215,37 @@
           }
         }
       },
+      "Volo.Abp.Users.Domain/10.0.0": {
+        "dependencies": {
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Users.Abstractions": "10.0.0",
+          "Volo.Abp.Users.Domain.Shared": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Users.Domain.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
       "Volo.Abp.Users.Domain.Shared/10.0.0": {
         "dependencies": {
           "Volo.Abp.Core": "10.0.0"
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Users.Domain.Shared.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "Volo.Abp.Users.EntityFrameworkCore/10.0.0": {
+        "dependencies": {
+          "Volo.Abp.EntityFrameworkCore": "10.0.0",
+          "Volo.Abp.Users.Domain": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.0.0"
           }
@@ -1278,6 +1396,27 @@
       "path": "microsoft.bcl.asyncinterfaces/10.0.0",
       "hashPath": "microsoft.bcl.asyncinterfaces.10.0.0.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hHa2amRjMyBLUH/KTML6FgIAhZ0VFYkhCKwWEax0rO6iNeM1P5MflyeQLE5dniSIOZHc3Oqyv5UIyTFO4e1Auw==",
+      "path": "microsoft.entityframeworkcore/10.0.0",
+      "hashPath": "microsoft.entityframeworkcore.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C+TT9k7f1GQ8agOfV512K9iwrzi76RXVSDiLx+iWC9pz3QhEpSF1Dyk+FpVvd8ULQ+rqymfM8KQ7g48ttQVyMg==",
+      "path": "microsoft.entityframeworkcore.abstractions/10.0.0",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A3MX1ee7RDxWCUdx/KqP+74fbksz0UIhkVZh56YHvbPkEKsffCXgHU3LGkRDwqR/MrBNWLCWC/IVX79tzM30ZA==",
+      "path": "microsoft.entityframeworkcore.relational/10.0.0",
+      "hashPath": "microsoft.entityframeworkcore.relational.10.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Caching.Hybrid/9.9.0": {
       "type": "package",
       "serviceable": true,
@@ -1361,6 +1500,13 @@
       "sha512": "sha512-K2ywYpoPEvU3+Ooq6wxz+FJOkmbDeoE41q/sJZWv9tI7qbTmH2A5R0E4hWzruvl/9pnUhqwbu1mxT06C45D0ZQ==",
       "path": "nuglify/1.21.17",
       "hashPath": "nuglify.1.21.17.nupkg.sha512"
+    },
+    "Riok.Mapperly/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9M60fNhHAx4Gzm3ebavQn60UT8uuFBM9kSfhepEWlEMoPhd/4mAdJAtBZmi+6RZJWTHil/VC/DrzihhPq39xhg==",
+      "path": "riok.mapperly/4.3.0",
+      "hashPath": "riok.mapperly.4.3.0.nupkg.sha512"
     },
     "System.CodeDom/10.0.0": {
       "type": "package",
@@ -1544,6 +1690,13 @@
       "path": "volo.abp.distributedlocking.abstractions/10.0.0",
       "hashPath": "volo.abp.distributedlocking.abstractions.10.0.0.nupkg.sha512"
     },
+    "Volo.Abp.EntityFrameworkCore/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+QLbAjS8erg+SvKBQ5MOI9TSfIqUm1NucAbbXX6iCLMa/E0eeNls9nFmwRoZs5Fnu57NsW8WM75Wy1NITNRygA==",
+      "path": "volo.abp.entityframeworkcore/10.0.0",
+      "hashPath": "volo.abp.entityframeworkcore.10.0.0.nupkg.sha512"
+    },
     "Volo.Abp.EventBus/10.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1628,12 +1781,26 @@
       "path": "volo.abp.identity.application.contracts/10.0.0",
       "hashPath": "volo.abp.identity.application.contracts.10.0.0.nupkg.sha512"
     },
+    "Volo.Abp.Identity.Domain/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kwvbWx9jWy/xHo/D3cIX+HJfBZh0uiAUkrc7sCT7UUnNdKMqIrQYYxgxYf1ZzBA2VYmuEKjKuhS0ujCX9QkDzg==",
+      "path": "volo.abp.identity.domain/10.0.0",
+      "hashPath": "volo.abp.identity.domain.10.0.0.nupkg.sha512"
+    },
     "Volo.Abp.Identity.Domain.Shared/10.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-CerFRZNNemUtrI6LV1wbxoc/dfes82YmKdE55lY7I1cUEkbwEonUWpSLbIUVwbORwm9pAa/OeYo3rdZxPYMiXQ==",
       "path": "volo.abp.identity.domain.shared/10.0.0",
       "hashPath": "volo.abp.identity.domain.shared.10.0.0.nupkg.sha512"
+    },
+    "Volo.Abp.Identity.EntityFrameworkCore/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WpCgXwunoL/C90e2Ew6E+uHmLWG1D0WrlAYoaEmoXjon5eyxA1CI72dsOYyqOglelsNTrdkOeI+3Ftu15JblQg==",
+      "path": "volo.abp.identity.entityframeworkcore/10.0.0",
+      "hashPath": "volo.abp.identity.entityframeworkcore.10.0.0.nupkg.sha512"
     },
     "Volo.Abp.Identity.HttpApi/10.0.0": {
       "type": "package",
@@ -1676,6 +1843,13 @@
       "sha512": "sha512-QdIx2TvZBU/sZ1s5IQpCVU0GauPhvE4jXMTt3zofe9ZUg8obrhfGCeAORa+PVasF45qaAhK/1TICxIdyYy9epw==",
       "path": "volo.abp.localization.abstractions/10.0.0",
       "hashPath": "volo.abp.localization.abstractions.10.0.0.nupkg.sha512"
+    },
+    "Volo.Abp.Mapperly/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C7pNMhGGu+fS8noxP1WT4SQQ4cwAG3yQYpXbv3Ocbnp7fueZcwGp958Uh9rzbK+qBfsSCGybsMbGclsAfCIh4Q==",
+      "path": "volo.abp.mapperly/10.0.0",
+      "hashPath": "volo.abp.mapperly.10.0.0.nupkg.sha512"
     },
     "Volo.Abp.Minify/10.0.0": {
       "type": "package",
@@ -1845,12 +2019,26 @@
       "path": "volo.abp.users.abstractions/10.0.0",
       "hashPath": "volo.abp.users.abstractions.10.0.0.nupkg.sha512"
     },
+    "Volo.Abp.Users.Domain/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z1bfrpDux2ARhvub7vG325eJiKJXisG/rUvN2SNpH9VsiNhEg0jwxTL0bl6xzEk/hBEqECUu+vBeeE9luVsRAw==",
+      "path": "volo.abp.users.domain/10.0.0",
+      "hashPath": "volo.abp.users.domain.10.0.0.nupkg.sha512"
+    },
     "Volo.Abp.Users.Domain.Shared/10.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-83Ev8A9kWRkm28PwfFqyuPwrrtCY4bvymXI5cHhl9BVZYLk3qC5UvElQNwnO5Ds+JpTH7KxdyBEdW9/wARBIQA==",
       "path": "volo.abp.users.domain.shared/10.0.0",
       "hashPath": "volo.abp.users.domain.shared.10.0.0.nupkg.sha512"
+    },
+    "Volo.Abp.Users.EntityFrameworkCore/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VXYu7JtrT2lxFs29TfqjuBxXA+8A5JR1OT/tOqM61Fnbis02BbOa/SY4Kk21RLzENUeXj0umiF3x5DxP7KxmRg==",
+      "path": "volo.abp.users.entityframeworkcore/10.0.0",
+      "hashPath": "volo.abp.users.entityframeworkcore.10.0.0.nupkg.sha512"
     },
     "Volo.Abp.Validation/10.0.0": {
       "type": "package",

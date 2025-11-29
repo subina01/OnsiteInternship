@@ -2782,6 +2782,7 @@
           "Volo.Abp.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Volo.Abp.AspNetCore.Mvc": "10.0.0",
           "Volo.Abp.FeatureManagement.HttpApi": "10.0.0",
+          "Volo.Abp.Identity.EntityFrameworkCore": "10.0.0",
           "Volo.Abp.Identity.HttpApi": "10.0.0",
           "Volo.Abp.PermissionManagement.HttpApi": "10.0.0",
           "Volo.Abp.SettingManagement.HttpApi": "10.0.0",

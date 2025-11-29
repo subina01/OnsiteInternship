@@ -15,7 +15,6 @@ using Volo.Abp.Application.Services;
 
 namespace LibraryManagement.Application.Services.Loans;
 
-[Authorize(LibraryManagementPermissions.Loans.Default)]
 public class LoanAppService : ApplicationService, ILoanAppService
 {
     private readonly ILoanRepository _loanRepository;
@@ -68,7 +67,6 @@ public class LoanAppService : ApplicationService, ILoanAppService
         return new PagedResultDto<LoanDto>(totalCount, loanDtos);
     }
 
-    [Authorize(LibraryManagementPermissions.Loans.Create)]
     public async Task<LoanDto> CreateAsync(CreateLoanDto input)
     {
         var loan = await _loanManager.CreateLoanAsync(
@@ -86,7 +84,6 @@ public class LoanAppService : ApplicationService, ILoanAppService
         return await GetAsync(loan.Id);
     }
 
-    [Authorize(LibraryManagementPermissions.Loans.Renew)]
     public async Task<LoanDto> RenewAsync(Guid id, RenewLoanDto input)
     {
         var loan = await _loanManager.RenewLoanAsync(id, input.AdditionalDays);
@@ -94,7 +91,6 @@ public class LoanAppService : ApplicationService, ILoanAppService
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Loans.Return)]
     public async Task<LoanDto> ReturnAsync(Guid id, ReturnLoanDto input)
     {
         var loan = await _loanManager.ReturnLoanAsync(id, input.ReturnDate);
@@ -108,7 +104,6 @@ public class LoanAppService : ApplicationService, ILoanAppService
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Loans.Edit)]
     public async Task<LoanDto> MarkAsLostAsync(Guid id)
     {
         var loan = await _loanRepository.GetAsync(id);
@@ -141,7 +136,6 @@ public class LoanAppService : ApplicationService, ILoanAppService
         return ObjectMapper.Map<List<Loan>, List<LoanDto>>(loans);
     }
 
-    [Authorize(LibraryManagementPermissions.Loans.Edit)]
     public async Task UpdateOverdueLoansAsync()
     {
         await _loanManager.UpdateOverdueLoansAsync();

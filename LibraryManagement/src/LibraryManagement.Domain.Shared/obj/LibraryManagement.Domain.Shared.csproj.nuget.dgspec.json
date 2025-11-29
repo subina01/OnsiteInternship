@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj": {}
+    "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj": {}
   },
   "projects": {
-    "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj": {
+    "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
+        "projectUniqueName": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
         "projectName": "LibraryManagement.Domain.Shared",
-        "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
+        "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\obj\\",
+        "outputPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

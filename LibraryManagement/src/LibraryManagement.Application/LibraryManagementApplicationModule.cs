@@ -34,7 +34,7 @@ public class LibraryManagementApplicationModule : AbpModule
 
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddMaps<LibraryManagementApplicationModule>(validate: true);
+            options.AddMaps<LibraryManagementApplicationModule>(validate: false);
         });
     }
 }

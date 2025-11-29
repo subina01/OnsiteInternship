@@ -14,7 +14,6 @@ using Volo.Abp.Guids;
 
 namespace LibraryManagement.Application.Services.Authors;
 
-[Authorize(LibraryManagementPermissions.Authors.Default)]
 public class AuthorAppService : CrudAppService<
     Author,
     AuthorDto,
@@ -29,12 +28,6 @@ public class AuthorAppService : CrudAppService<
         : base(repository)
     {
         _authorRepository = repository;
-
-        GetPolicyName = LibraryManagementPermissions.Authors.Default;
-        GetListPolicyName = LibraryManagementPermissions.Authors.Default;
-        CreatePolicyName = LibraryManagementPermissions.Authors.Create;
-        UpdatePolicyName = LibraryManagementPermissions.Authors.Edit;
-        DeletePolicyName = LibraryManagementPermissions.Authors.Delete;
     }
 
     protected override async Task<IQueryable<Author>> CreateFilteredQueryAsync(GetAuthorListInput input)
@@ -50,7 +43,6 @@ public class AuthorAppService : CrudAppService<
         return query;
     }
 
-    [Authorize(LibraryManagementPermissions.Authors.Create)]
     public override async Task<AuthorDto> CreateAsync(CreateUpdateAuthorDto input)
     {
         var author = new Author(
@@ -65,7 +57,6 @@ public class AuthorAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(author);
     }
 
-    [Authorize(LibraryManagementPermissions.Authors.Edit)]
     public override async Task<AuthorDto> UpdateAsync(Guid id, CreateUpdateAuthorDto input)
     {
         var author = await _authorRepository.GetAsync(id);
@@ -80,7 +71,6 @@ public class AuthorAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(author);
     }
 
-    [Authorize(LibraryManagementPermissions.Authors.Delete)]
     public override async Task DeleteAsync(Guid id)
     {
         if (await _authorRepository.HasBooksAsync(id))

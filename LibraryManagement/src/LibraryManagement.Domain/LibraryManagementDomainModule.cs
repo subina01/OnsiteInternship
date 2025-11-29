@@ -20,8 +20,7 @@ namespace LibraryManagement.Domain;
     typeof(AbpTenantManagementDomainModule),
     typeof(AbpFeatureManagementDomainModule),
     typeof(AbpSettingManagementDomainModule),
-    typeof(AbpEmailingModule),
-    typeof(AbpIdentityDomainModule)
+    typeof(AbpEmailingModule)
 )]
 public class LibraryManagementDomainModule : AbpModule
 {

@@ -15,6 +15,7 @@ namespace LibraryManagement.HttpApi.Controllers.Authors;
 [Area("libraryManagement")]
 [ControllerName("Author")]
 [Route("api/library-management/authors")]
+[IgnoreAntiforgeryToken]
 public class AuthorController : AbpController
 {
     private readonly IAuthorAppService _authorAppService;

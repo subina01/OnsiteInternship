@@ -13,7 +13,6 @@ using Volo.Abp.Guids;
 
 namespace LibraryManagement.Application.Services.Categories;
 
-[Authorize(LibraryManagementPermissions.Categories.Default)]
 public class CategoryAppService : CrudAppService<
     Category,
     CategoryDto,
@@ -28,12 +27,6 @@ public class CategoryAppService : CrudAppService<
         : base(repository)
     {
         _categoryRepository = repository;
-
-        GetPolicyName = LibraryManagementPermissions.Categories.Default;
-        GetListPolicyName = LibraryManagementPermissions.Categories.Default;
-        CreatePolicyName = LibraryManagementPermissions.Categories.Create;
-        UpdatePolicyName = LibraryManagementPermissions.Categories.Edit;
-        DeletePolicyName = LibraryManagementPermissions.Categories.Delete;
     }
 
     protected override async Task<IQueryable<Category>> CreateFilteredQueryAsync(GetCategoryListInput input)
@@ -47,7 +40,6 @@ public class CategoryAppService : CrudAppService<
         return query;
     }
 
-    [Authorize(LibraryManagementPermissions.Categories.Create)]
     public override async Task<CategoryDto> CreateAsync(CreateUpdateCategoryDto input)
     {
         var category = new Category(
@@ -60,7 +52,6 @@ public class CategoryAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(category);
     }
 
-    [Authorize(LibraryManagementPermissions.Categories.Edit)]
     public override async Task<CategoryDto> UpdateAsync(Guid id, CreateUpdateCategoryDto input)
     {
         var category = await _categoryRepository.GetAsync(id);
@@ -73,7 +64,6 @@ public class CategoryAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(category);
     }
 
-    [Authorize(LibraryManagementPermissions.Categories.Delete)]
     public override async Task DeleteAsync(Guid id)
     {
         if (await _categoryRepository.HasBooksAsync(id))

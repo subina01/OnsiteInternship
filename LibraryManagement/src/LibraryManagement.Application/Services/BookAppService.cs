@@ -7,7 +7,6 @@ using LibraryManagement.Domain.Entities;
 using LibraryManagement.Domain.Repositories;
 using LibraryManagement.Domain.Shared.Constants;
 using LibraryManagement.Domain.ValueObjects;
-using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +15,6 @@ using Volo.Abp.Domain.Repositories;
 
 namespace LibraryManagement.Application.Services;
 
-[Authorize(LibraryManagementPermissions.Books.Default)]
 public class BookAppService : CrudAppService<
     Book,
     BookDto,
@@ -41,12 +39,6 @@ public class BookAppService : CrudAppService<
         _authorRepository = authorRepository;
         _categoryRepository = categoryRepository;
         _bookManager = bookManager;
-
-        GetPolicyName = LibraryManagementPermissions.Books.Default;
-        GetListPolicyName = LibraryManagementPermissions.Books.Default;
-        CreatePolicyName = LibraryManagementPermissions.Books.Create;
-        UpdatePolicyName = LibraryManagementPermissions.Books.Edit;
-        DeletePolicyName = LibraryManagementPermissions.Books.Delete;
     }
 
     protected override async Task<IQueryable<Book>> CreateFilteredQueryAsync(GetBookListInput input)
@@ -92,7 +84,6 @@ public class BookAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(book);
     }
 
-    [Authorize(LibraryManagementPermissions.Books.Create)]
     public override async Task<BookDto> CreateAsync(CreateUpdateBookDto input)
     {
         var book = await _bookManager.CreateAsync(
@@ -124,7 +115,6 @@ public class BookAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(book);
     }
 
-    [Authorize(LibraryManagementPermissions.Books.Edit)]
     public override async Task<BookDto> UpdateAsync(Guid id, CreateUpdateBookDto input)
     {
         var book = await _bookRepository.GetAsync(id, includeDetails: true);

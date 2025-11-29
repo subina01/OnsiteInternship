@@ -3981,6 +3981,7 @@
           "Volo.Abp.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Volo.Abp.AspNetCore.Mvc": "10.0.0",
           "Volo.Abp.FeatureManagement.HttpApi": "10.0.0",
+          "Volo.Abp.Identity.EntityFrameworkCore": "10.0.0",
           "Volo.Abp.Identity.HttpApi": "10.0.0",
           "Volo.Abp.PermissionManagement.HttpApi": "10.0.0",
           "Volo.Abp.SettingManagement.HttpApi": "10.0.0",
@@ -10441,11 +10442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\LibraryManagement.HttpApi.Host.csproj",
+      "projectUniqueName": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\LibraryManagement.HttpApi.Host.csproj",
       "projectName": "LibraryManagement.HttpApi.Host",
-      "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\LibraryManagement.HttpApi.Host.csproj",
+      "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\LibraryManagement.HttpApi.Host.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\obj\\",
+      "outputPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi.Host\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -10466,14 +10467,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\LibraryManagement\\src\\LibraryManagement.Application\\LibraryManagement.Application.csproj": {
-              "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.Application\\LibraryManagement.Application.csproj"
+            "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Application\\LibraryManagement.Application.csproj": {
+              "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Application\\LibraryManagement.Application.csproj"
             },
-            "D:\\LibraryManagement\\src\\LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj": {
-              "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj"
+            "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj": {
+              "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj"
             },
-            "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj": {
-              "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj"
+            "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj": {
+              "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj"
             }
           }
         }

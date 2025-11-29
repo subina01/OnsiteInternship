@@ -19,7 +19,6 @@ using LibraryManagement.Domain.Shared.Enums;
 
 namespace LibraryManagement.Application.Services.Reservations;
 
-[Authorize(LibraryManagementPermissions.Reservations.Default)]
 public class ReservationAppService : ApplicationService, IReservationAppService
 {
     private readonly IReservationRepository _reservationRepository;
@@ -71,7 +70,6 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return new PagedResultDto<ReservationDto>(totalCount, reservationDtos);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Create)]
     public async Task<ReservationDto> CreateAsync(CreateReservationDto input)
     {
         // Validate book exists
@@ -113,7 +111,6 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return await GetAsync(reservation.Id);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Edit)]
     public async Task<ReservationDto> UpdateAsync(Guid id, UpdateReservationDto input)
     {
         var reservation = await _reservationRepository.GetAsync(id);
@@ -128,13 +125,11 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Delete)]
     public async Task DeleteAsync(Guid id)
     {
         await _reservationRepository.DeleteAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Edit)]
     public async Task<ReservationDto> MarkAsReadyAsync(Guid id)
     {
         var reservation = await _reservationRepository.GetAsync(id);
@@ -143,7 +138,6 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Edit)]
     public async Task<ReservationDto> FulfillAsync(Guid id)
     {
         var reservation = await _reservationRepository.GetAsync(id);
@@ -152,7 +146,6 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Cancel)]
     public async Task<ReservationDto> CancelAsync(Guid id)
     {
         var reservation = await _reservationRepository.GetAsync(id);
@@ -179,7 +172,6 @@ public class ReservationAppService : ApplicationService, IReservationAppService
         return ObjectMapper.Map<List<Reservation>, List<ReservationDto>>(reservations);
     }
 
-    [Authorize(LibraryManagementPermissions.Reservations.Edit)]
     public async Task UpdateExpiredReservationsAsync()
     {
         var expiredReservations = await _reservationRepository.GetExpiredReservationsAsync();

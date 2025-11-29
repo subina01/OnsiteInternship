@@ -5837,6 +5837,22 @@
     ]
   },
   {
+    "ContainingType": "LibraryManagement.HttpApi.Controllers.Auth.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "LibraryManagement.Application.Contracts.DTOs.Auth.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Volo.Abp.FeatureManagement.FeaturesController",
     "Method": "GetAsync",
     "RelativePath": "api/feature-management/features",

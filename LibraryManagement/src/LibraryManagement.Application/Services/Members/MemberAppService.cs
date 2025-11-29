@@ -15,7 +15,6 @@ using Volo.Abp.Application.Services;
 
 namespace LibraryManagement.Application.Services.Members;
 
-[Authorize(LibraryManagementPermissions.Members.Default)]
 public class MemberAppService : CrudAppService<
     Member,
     MemberDto,
@@ -37,12 +36,6 @@ public class MemberAppService : CrudAppService<
         _memberRepository = repository;
         _loanRepository = loanRepository;
         _memberManager = memberManager;
-
-        GetPolicyName = LibraryManagementPermissions.Members.Default;
-        GetListPolicyName = LibraryManagementPermissions.Members.Default;
-        CreatePolicyName = LibraryManagementPermissions.Members.Create;
-        UpdatePolicyName = LibraryManagementPermissions.Members.Edit;
-        DeletePolicyName = LibraryManagementPermissions.Members.Delete;
     }
 
     protected override async Task<IQueryable<Member>> CreateFilteredQueryAsync(GetMemberListInput input)
@@ -76,7 +69,6 @@ public class MemberAppService : CrudAppService<
         return dto;
     }
 
-    [Authorize(LibraryManagementPermissions.Members.Create)]
     public override async Task<MemberDto> CreateAsync(CreateUpdateMemberDto input)
     {
         Address? address = null;
@@ -99,7 +91,6 @@ public class MemberAppService : CrudAppService<
         return await GetAsync(member.Id);
     }
 
-    [Authorize(LibraryManagementPermissions.Members.Edit)]
     public override async Task<MemberDto> UpdateAsync(Guid id, CreateUpdateMemberDto input)
     {
         var member = await _memberRepository.GetAsync(id);
@@ -134,7 +125,6 @@ public class MemberAppService : CrudAppService<
         return await GetAsync(member.Id);
     }
 
-    [Authorize(LibraryManagementPermissions.Members.Delete)]
     public override async Task DeleteAsync(Guid id)
     {
         var member = await _memberRepository.GetAsync(id);
@@ -154,7 +144,6 @@ public class MemberAppService : CrudAppService<
         return ObjectMapper.Map<List<Member>, List<MemberDto>>(members);
     }
 
-    [Authorize(LibraryManagementPermissions.Members.Edit)]
     public async Task<MemberDto> RenewMembershipAsync(Guid id)
     {
         var member = await _memberRepository.GetAsync(id);
@@ -163,7 +152,6 @@ public class MemberAppService : CrudAppService<
         return await GetAsync(id);
     }
 
-    [Authorize(LibraryManagementPermissions.Members.Edit)]
     public async Task<MemberDto> ExtendMembershipAsync(Guid id, int months)
     {
         var member = await _memberRepository.GetAsync(id);

@@ -13,7 +13,6 @@ using Volo.Abp.Guids;
 
 namespace LibraryManagement.Application.Services.Publishers;
 
-[Authorize(LibraryManagementPermissions.Publishers.Default)]
 public class PublisherAppService : CrudAppService<
     Publisher,
     PublisherDto,
@@ -28,12 +27,6 @@ public class PublisherAppService : CrudAppService<
         : base(repository)
     {
         _publisherRepository = repository;
-
-        GetPolicyName = LibraryManagementPermissions.Publishers.Default;
-        GetListPolicyName = LibraryManagementPermissions.Publishers.Default;
-        CreatePolicyName = LibraryManagementPermissions.Publishers.Create;
-        UpdatePolicyName = LibraryManagementPermissions.Publishers.Edit;
-        DeletePolicyName = LibraryManagementPermissions.Publishers.Delete;
     }
 
     protected override async Task<IQueryable<Publisher>> CreateFilteredQueryAsync(GetPublisherListInput input)
@@ -47,7 +40,6 @@ public class PublisherAppService : CrudAppService<
         return query;
     }
 
-    [Authorize(LibraryManagementPermissions.Publishers.Create)]
     public override async Task<PublisherDto> CreateAsync(CreateUpdatePublisherDto input)
     {
         var publisher = new Publisher(
@@ -62,7 +54,6 @@ public class PublisherAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(publisher);
     }
 
-    [Authorize(LibraryManagementPermissions.Publishers.Edit)]
     public override async Task<PublisherDto> UpdateAsync(Guid id, CreateUpdatePublisherDto input)
     {
         var publisher = await _publisherRepository.GetAsync(id);
@@ -77,7 +68,6 @@ public class PublisherAppService : CrudAppService<
         return await MapToGetOutputDtoAsync(publisher);
     }
 
-    [Authorize(LibraryManagementPermissions.Publishers.Delete)]
     public override async Task DeleteAsync(Guid id)
     {
         if (await _publisherRepository.HasBooksAsync(id))

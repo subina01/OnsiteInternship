@@ -1,6 +1,7 @@
 ﻿using LibraryManagement.Application;
 using LibraryManagement.Application.Contracts;
 using LibraryManagement.EntityFrameworkCore;
+using LibraryManagement.HttpApi.Controllers.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.OpenApi;
@@ -32,7 +33,7 @@ namespace LibraryManagement.HttpApi.Host;
     typeof(AbpSwashbuckleModule),
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpCachingStackExchangeRedisModule),
-    typeof(AbpAccountApplicationModule),     
+    typeof(AbpAccountApplicationModule),
     typeof(AbpAccountHttpApiModule),
     typeof(AbpIdentityHttpApiModule)
 )]
@@ -56,6 +57,7 @@ public class LibraryManagementHttpApiHostModule : AbpModule
         Configure<AbpAspNetCoreMvcOptions>(options =>
         {
             options.ConventionalControllers.Create(typeof(LibraryManagementApplicationModule).Assembly);
+            options.ConventionalControllers.Create(typeof(AuthController).Assembly);
         });
     }
 
@@ -64,9 +66,17 @@ public class LibraryManagementHttpApiHostModule : AbpModule
         context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
-                options.Authority = configuration["AuthServer:Authority"];
-                options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
-                options.Audience = "LibraryManagement";
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = configuration["Jwt:Issuer"],
+                    ValidAudience = configuration["Jwt:Audience"],
+                    IssuerSigningKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(
+                        System.Text.Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!))
+                };
             });
     }
 

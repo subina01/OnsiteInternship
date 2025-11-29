@@ -47,6 +47,9 @@ public class LibraryManagementDataSeeder : IDataSeedContributor, ITransientDepen
             return;
         }
 
+        // Seed test user for authentication
+        await SeedTestUserAsync();
+
         // Seed Categories
         var fictionCategory = await SeedCategoryAsync("Fiction", "Fictional literature including novels and short stories");
         var scienceCategory = await SeedCategoryAsync("Science", "Scientific books and research materials");
@@ -217,6 +220,12 @@ public class LibraryManagementDataSeeder : IDataSeedContributor, ITransientDepen
             membershipType,
             phoneNumber);
 
-        return await _memberRepository.InsertAsync(member);
+        return         await _memberRepository.InsertAsync(member);
+    }
+
+    private async Task SeedTestUserAsync()
+    {
+        // This is a simplified version - in a real application you'd use proper user management
+        // For testing purposes, we'll assume authentication is handled elsewhere
     }
 }

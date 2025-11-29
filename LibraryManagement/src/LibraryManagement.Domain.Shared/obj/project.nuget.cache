@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MfEsLKecZZg=",
+  "dgSpecHash": "/23zX6WPaTc=",
   "success": true,
-  "projectFilePath": "D:\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
+  "projectFilePath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\jetbrains.annotations\\2025.2.2\\jetbrains.annotations.2025.2.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.0\\microsoft.aspnetcore.authorization.10.0.0.nupkg.sha512",

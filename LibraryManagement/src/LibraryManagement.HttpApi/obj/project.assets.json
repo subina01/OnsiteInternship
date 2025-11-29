@@ -165,6 +165,35 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Cryptography.Internal/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Metadata/10.0.0": {
         "type": "package",
         "compile": {
@@ -187,6 +216,63 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.0",
+          "Microsoft.Extensions.Caching.Memory": "10.0.0",
+          "Microsoft.Extensions.Logging": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/10.0.0": {
+        "type": "package"
+      },
+      "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.Extensions.Caching.Memory": "10.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Logging": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
             "related": ".xml"
           }
         }
@@ -619,6 +705,24 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Identity.Core/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "10.0.0",
+          "Microsoft.Extensions.Logging": "10.0.0",
+          "Microsoft.Extensions.Options": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Localization/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -917,6 +1021,22 @@
           "lib/net5.0/NUglify.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Riok.Mapperly/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "System.CodeDom/10.0.0": {
@@ -1439,6 +1559,25 @@
           }
         }
       },
+      "Volo.Abp.EntityFrameworkCore/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0",
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.EntityFrameworkCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.EntityFrameworkCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Volo.Abp.EventBus/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -1654,6 +1793,26 @@
           }
         }
       },
+      "Volo.Abp.Identity.Domain/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Core": "10.0.0",
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Identity.Domain.Shared": "10.0.0",
+          "Volo.Abp.Mapperly": "10.0.0",
+          "Volo.Abp.Users.Domain": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.Identity.Domain.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Identity.Domain.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Volo.Abp.Identity.Domain.Shared/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -1670,6 +1829,23 @@
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Identity.Domain.Shared.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Volo.Abp.Identity.EntityFrameworkCore/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Volo.Abp.Identity.Domain": "10.0.0",
+          "Volo.Abp.Users.EntityFrameworkCore": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1782,6 +1958,25 @@
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Localization.Abstractions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Volo.Abp.Mapperly/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Riok.Mapperly": "4.3.0",
+          "Volo.Abp.Auditing": "10.0.0",
+          "Volo.Abp.ObjectExtending": "10.0.0",
+          "Volo.Abp.ObjectMapping": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.Mapperly.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Mapperly.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2200,6 +2395,24 @@
           }
         }
       },
+      "Volo.Abp.Users.Domain/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Volo.Abp.Ddd.Domain": "10.0.0",
+          "Volo.Abp.Users.Abstractions": "10.0.0",
+          "Volo.Abp.Users.Domain.Shared": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.Users.Domain.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Users.Domain.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Volo.Abp.Users.Domain.Shared/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -2212,6 +2425,23 @@
         },
         "runtime": {
           "lib/net10.0/Volo.Abp.Users.Domain.Shared.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Volo.Abp.Users.EntityFrameworkCore/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Volo.Abp.EntityFrameworkCore": "10.0.0",
+          "Volo.Abp.Users.Domain": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2496,6 +2726,44 @@
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Cryptography.Internal/10.0.0": {
+      "sha512": "jGlm8BsWcN1IIxLaxcHP6s0u2OEiBMa0HPCiWkMK7xox/h4WP2CRMyk7tV0cJC5LdM3JoR5UUqU2cxat6ElwlA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.internal/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "lib/net462/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/net462/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "microsoft.aspnetcore.cryptography.internal.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/10.0.0": {
+      "sha512": "Xo7cBZnUfe+i+rnfM+NH/KVD50BnBrfjsUBjMzjxAL0HdNAUcnhcx9/01o4CX7CKf+jc2bgvg+frlT4aJcVdyg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/net462/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/net462/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "microsoft.aspnetcore.cryptography.keyderivation.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Metadata/10.0.0": {
       "sha512": "uMXReBNxJKabrdoxHn4LNDTlGQFGDPtntlVvqo/b0HaxJzeDAIMFXJJ64mufJCNRuQU/Pus8ngcTZErvnsh7vg==",
       "type": "package",
@@ -2536,6 +2804,66 @@
         "microsoft.bcl.asyncinterfaces.10.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/10.0.0": {
+      "sha512": "hHa2amRjMyBLUH/KTML6FgIAhZ0VFYkhCKwWEax0rO6iNeM1P5MflyeQLE5dniSIOZHc3Oqyv5UIyTFO4e1Auw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.xml",
+        "microsoft.entityframeworkcore.10.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/10.0.0": {
+      "sha512": "C+TT9k7f1GQ8agOfV512K9iwrzi76RXVSDiLx+iWC9pz3QhEpSF1Dyk+FpVvd8ULQ+rqymfM8KQ7g48ttQVyMg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
+        "microsoft.entityframeworkcore.abstractions.10.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/10.0.0": {
+      "sha512": "TxHQq0kn0tpYs2ljeRl8jtmWk720B0nteqI6mAZM77HWJpYT9Zj8SkkBBlj8K3Yeq18a6NBjz6YutE+shEk4Ag==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.analyzers/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.analyzers.10.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
+      "sha512": "A3MX1ee7RDxWCUdx/KqP+74fbksz0UIhkVZh56YHvbPkEKsffCXgHU3LGkRDwqR/MrBNWLCWC/IVX79tzM30ZA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.xml",
+        "microsoft.entityframeworkcore.relational.10.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/10.0.0": {
@@ -3157,6 +3485,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Identity.Core/10.0.0": {
+      "sha512": "EstJPVPxd71mTw5x4pbnUvSpPi3xWDNasM0QZx0p2J6bCxQkq7YNksRUJvOfFN28VCMrGRejnheNaGLDy/ROQQ==",
+      "type": "package",
+      "path": "microsoft.extensions.identity.core/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/net10.0/Microsoft.Extensions.Identity.Core.xml",
+        "lib/net462/Microsoft.Extensions.Identity.Core.dll",
+        "lib/net462/Microsoft.Extensions.Identity.Core.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
+        "microsoft.extensions.identity.core.10.0.0.nupkg.sha512",
+        "microsoft.extensions.identity.core.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Localization/10.0.0": {
       "sha512": "C9T58tV7rLoBp9bqpEk9L8CpbIwEeXKJXhpwfRpCMQs5VgzGLcMpQnP6IhtdYIt5sBjDy25inYY8BDiVdLA6MA==",
       "type": "package",
@@ -3641,6 +3988,34 @@
         "nuglify.1.21.17.nupkg.sha512",
         "nuglify.nuspec",
         "nuglify.png"
+      ]
+    },
+    "Riok.Mapperly/4.3.0": {
+      "sha512": "9M60fNhHAx4Gzm3ebavQn60UT8uuFBM9kSfhepEWlEMoPhd/4mAdJAtBZmi+6RZJWTHil/VC/DrzihhPq39xhg==",
+      "type": "package",
+      "path": "riok.mapperly/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/roslyn4.0/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.0/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.4/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.4/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.5/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.5/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.7/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.7/dotnet/cs/Riok.Mapperly.dll",
+        "build/Riok.Mapperly.targets",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.xml",
+        "logo.png",
+        "riok.mapperly.4.3.0.nupkg.sha512",
+        "riok.mapperly.nuspec"
       ]
     },
     "System.CodeDom/10.0.0": {
@@ -4371,6 +4746,23 @@
         "volo.abp.distributedlocking.abstractions.nuspec"
       ]
     },
+    "Volo.Abp.EntityFrameworkCore/10.0.0": {
+      "sha512": "+QLbAjS8erg+SvKBQ5MOI9TSfIqUm1NucAbbXX6iCLMa/E0eeNls9nFmwRoZs5Fnu57NsW8WM75Wy1NITNRygA==",
+      "type": "package",
+      "path": "volo.abp.entityframeworkcore/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "content/Volo.Abp.EntityFrameworkCore.abppkg",
+        "content/Volo.Abp.EntityFrameworkCore.abppkg.analyze.json",
+        "lib/net10.0/Volo.Abp.EntityFrameworkCore.dll",
+        "lib/net10.0/Volo.Abp.EntityFrameworkCore.pdb",
+        "lib/net10.0/Volo.Abp.EntityFrameworkCore.xml",
+        "volo.abp.entityframeworkcore.10.0.0.nupkg.sha512",
+        "volo.abp.entityframeworkcore.nuspec"
+      ]
+    },
     "Volo.Abp.EventBus/10.0.0": {
       "sha512": "wkui6UCmiD4v5PCZh/g21uGYkAtO66LrEW6XDuRGr6+GvV51oVnQ/7DOAeSPnkxfDlUMk7UltC2gkyK1UZ6a5w==",
       "type": "package",
@@ -4707,6 +5099,23 @@
         "volo.abp.identity.application.contracts.nuspec"
       ]
     },
+    "Volo.Abp.Identity.Domain/10.0.0": {
+      "sha512": "kwvbWx9jWy/xHo/D3cIX+HJfBZh0uiAUkrc7sCT7UUnNdKMqIrQYYxgxYf1ZzBA2VYmuEKjKuhS0ujCX9QkDzg==",
+      "type": "package",
+      "path": "volo.abp.identity.domain/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "content/Volo.Abp.Identity.Domain.abppkg",
+        "content/Volo.Abp.Identity.Domain.abppkg.analyze.json",
+        "lib/net10.0/Volo.Abp.Identity.Domain.dll",
+        "lib/net10.0/Volo.Abp.Identity.Domain.pdb",
+        "lib/net10.0/Volo.Abp.Identity.Domain.xml",
+        "volo.abp.identity.domain.10.0.0.nupkg.sha512",
+        "volo.abp.identity.domain.nuspec"
+      ]
+    },
     "Volo.Abp.Identity.Domain.Shared/10.0.0": {
       "sha512": "CerFRZNNemUtrI6LV1wbxoc/dfes82YmKdE55lY7I1cUEkbwEonUWpSLbIUVwbORwm9pAa/OeYo3rdZxPYMiXQ==",
       "type": "package",
@@ -4734,6 +5143,23 @@
         "lib/netstandard2.1/Volo.Abp.Identity.Domain.Shared.xml",
         "volo.abp.identity.domain.shared.10.0.0.nupkg.sha512",
         "volo.abp.identity.domain.shared.nuspec"
+      ]
+    },
+    "Volo.Abp.Identity.EntityFrameworkCore/10.0.0": {
+      "sha512": "WpCgXwunoL/C90e2Ew6E+uHmLWG1D0WrlAYoaEmoXjon5eyxA1CI72dsOYyqOglelsNTrdkOeI+3Ftu15JblQg==",
+      "type": "package",
+      "path": "volo.abp.identity.entityframeworkcore/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "content/Volo.Abp.Identity.EntityFrameworkCore.abppkg",
+        "content/Volo.Abp.Identity.EntityFrameworkCore.abppkg.analyze.json",
+        "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.dll",
+        "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.pdb",
+        "lib/net10.0/Volo.Abp.Identity.EntityFrameworkCore.xml",
+        "volo.abp.identity.entityframeworkcore.10.0.0.nupkg.sha512",
+        "volo.abp.identity.entityframeworkcore.nuspec"
       ]
     },
     "Volo.Abp.Identity.HttpApi/10.0.0": {
@@ -4897,6 +5323,33 @@
         "lib/netstandard2.1/Volo.Abp.Localization.Abstractions.xml",
         "volo.abp.localization.abstractions.10.0.0.nupkg.sha512",
         "volo.abp.localization.abstractions.nuspec"
+      ]
+    },
+    "Volo.Abp.Mapperly/10.0.0": {
+      "sha512": "C7pNMhGGu+fS8noxP1WT4SQQ4cwAG3yQYpXbv3Ocbnp7fueZcwGp958Uh9rzbK+qBfsSCGybsMbGclsAfCIh4Q==",
+      "type": "package",
+      "path": "volo.abp.mapperly/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "lib/net10.0/Volo.Abp.Mapperly.dll",
+        "lib/net10.0/Volo.Abp.Mapperly.pdb",
+        "lib/net10.0/Volo.Abp.Mapperly.xml",
+        "lib/net8.0/Volo.Abp.Mapperly.dll",
+        "lib/net8.0/Volo.Abp.Mapperly.pdb",
+        "lib/net8.0/Volo.Abp.Mapperly.xml",
+        "lib/net9.0/Volo.Abp.Mapperly.dll",
+        "lib/net9.0/Volo.Abp.Mapperly.pdb",
+        "lib/net9.0/Volo.Abp.Mapperly.xml",
+        "lib/netstandard2.0/Volo.Abp.Mapperly.dll",
+        "lib/netstandard2.0/Volo.Abp.Mapperly.pdb",
+        "lib/netstandard2.0/Volo.Abp.Mapperly.xml",
+        "lib/netstandard2.1/Volo.Abp.Mapperly.dll",
+        "lib/netstandard2.1/Volo.Abp.Mapperly.pdb",
+        "lib/netstandard2.1/Volo.Abp.Mapperly.xml",
+        "volo.abp.mapperly.10.0.0.nupkg.sha512",
+        "volo.abp.mapperly.nuspec"
       ]
     },
     "Volo.Abp.Minify/10.0.0": {
@@ -5557,6 +6010,35 @@
         "volo.abp.users.abstractions.nuspec"
       ]
     },
+    "Volo.Abp.Users.Domain/10.0.0": {
+      "sha512": "z1bfrpDux2ARhvub7vG325eJiKJXisG/rUvN2SNpH9VsiNhEg0jwxTL0bl6xzEk/hBEqECUu+vBeeE9luVsRAw==",
+      "type": "package",
+      "path": "volo.abp.users.domain/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "content/Volo.Abp.Users.Domain.abppkg",
+        "content/Volo.Abp.Users.Domain.abppkg.analyze.json",
+        "lib/net10.0/Volo.Abp.Users.Domain.dll",
+        "lib/net10.0/Volo.Abp.Users.Domain.pdb",
+        "lib/net10.0/Volo.Abp.Users.Domain.xml",
+        "lib/net8.0/Volo.Abp.Users.Domain.dll",
+        "lib/net8.0/Volo.Abp.Users.Domain.pdb",
+        "lib/net8.0/Volo.Abp.Users.Domain.xml",
+        "lib/net9.0/Volo.Abp.Users.Domain.dll",
+        "lib/net9.0/Volo.Abp.Users.Domain.pdb",
+        "lib/net9.0/Volo.Abp.Users.Domain.xml",
+        "lib/netstandard2.0/Volo.Abp.Users.Domain.dll",
+        "lib/netstandard2.0/Volo.Abp.Users.Domain.pdb",
+        "lib/netstandard2.0/Volo.Abp.Users.Domain.xml",
+        "lib/netstandard2.1/Volo.Abp.Users.Domain.dll",
+        "lib/netstandard2.1/Volo.Abp.Users.Domain.pdb",
+        "lib/netstandard2.1/Volo.Abp.Users.Domain.xml",
+        "volo.abp.users.domain.10.0.0.nupkg.sha512",
+        "volo.abp.users.domain.nuspec"
+      ]
+    },
     "Volo.Abp.Users.Domain.Shared/10.0.0": {
       "sha512": "83Ev8A9kWRkm28PwfFqyuPwrrtCY4bvymXI5cHhl9BVZYLk3qC5UvElQNwnO5Ds+JpTH7KxdyBEdW9/wARBIQA==",
       "type": "package",
@@ -5584,6 +6066,23 @@
         "lib/netstandard2.1/Volo.Abp.Users.Domain.Shared.xml",
         "volo.abp.users.domain.shared.10.0.0.nupkg.sha512",
         "volo.abp.users.domain.shared.nuspec"
+      ]
+    },
+    "Volo.Abp.Users.EntityFrameworkCore/10.0.0": {
+      "sha512": "VXYu7JtrT2lxFs29TfqjuBxXA+8A5JR1OT/tOqM61Fnbis02BbOa/SY4Kk21RLzENUeXj0umiF3x5DxP7KxmRg==",
+      "type": "package",
+      "path": "volo.abp.users.entityframeworkcore/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "content/Volo.Abp.Users.EntityFrameworkCore.abppkg",
+        "content/Volo.Abp.Users.EntityFrameworkCore.abppkg.analyze.json",
+        "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.dll",
+        "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.pdb",
+        "lib/net10.0/Volo.Abp.Users.EntityFrameworkCore.xml",
+        "volo.abp.users.entityframeworkcore.10.0.0.nupkg.sha512",
+        "volo.abp.users.entityframeworkcore.nuspec"
       ]
     },
     "Volo.Abp.Validation/10.0.0": {
@@ -5691,6 +6190,7 @@
       "Volo.Abp.AspNetCore.Authentication.JwtBearer >= 10.0.0",
       "Volo.Abp.AspNetCore.Mvc >= 10.0.0",
       "Volo.Abp.FeatureManagement.HttpApi >= 10.0.0",
+      "Volo.Abp.Identity.EntityFrameworkCore >= 10.0.0",
       "Volo.Abp.Identity.HttpApi >= 10.0.0",
       "Volo.Abp.PermissionManagement.HttpApi >= 10.0.0",
       "Volo.Abp.SettingManagement.HttpApi >= 10.0.0",
@@ -5704,11 +6204,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj",
+      "projectUniqueName": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj",
       "projectName": "LibraryManagement.HttpApi",
-      "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj",
+      "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi\\LibraryManagement.HttpApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\LibraryManagement\\src\\LibraryManagement.HttpApi\\obj\\",
+      "outputPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.HttpApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5729,8 +6229,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\LibraryManagement\\src\\LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj": {
-              "projectPath": "D:\\LibraryManagement\\src\\LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj"
+            "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj": {
+              "projectPath": "D:\\OnsiteInternship\\LibraryManagement\\src\\LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj"
             }
           }
         }
@@ -5764,6 +6264,10 @@
             "version": "[10.0.0, )"
           },
           "Volo.Abp.FeatureManagement.HttpApi": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
+          "Volo.Abp.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[10.0.0, )"
           },
