@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "WeatherGrpc";
+
+service Weather {
+  rpc GetWeather (WeatherRequest) returns (WeatherReply);
+  rpc GetWeatherStream (WeatherRequest) returns (stream WeatherReply);
+}
+
+message WeatherRequest {
+  string city = 1;
+}
+
+message WeatherReply {
+  string city = 1;
+  string summary = 2;
+  int32 temperatureC = 3;
+}

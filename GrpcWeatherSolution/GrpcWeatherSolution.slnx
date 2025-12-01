@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="GrpcWeatherClient/GrpcWeatherClient.csproj" />
+  <Project Path="GrpcWeatherServer/GrpcWeatherServer.csproj" />
+</Solution>
