@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option csharp_namespace = "Catalog.API.Protos";
+
+package cataloggrpc;
+
+service CatalogService {
+  rpc GetProduct (GetProductRequest) returns (ProductResponse);
+  rpc GetProducts (GetProductsRequest) returns (ProductsResponse);
+  rpc UpdateStock (UpdateStockRequest) returns (UpdateStockResponse);
+}
+
+message GetProductRequest {
+  string product_id = 1;
+}
+
+message GetProductsRequest {
+  repeated string product_ids = 1;
+}
+
+message ProductResponse {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string image_url = 5;
+  int32 stock_quantity = 6;
+  bool is_available = 7;
+  string sku = 8;
+}
+
+message ProductsResponse {
+  repeated ProductResponse products = 1;
+}
+
+message UpdateStockRequest {
+  string product_id = 1;
+  int32 quantity = 2;
+}
+
+message UpdateStockResponse {
+  bool success = 1;
+  string message = 2;
+}
